@@ -276,6 +276,45 @@
     Whether you have a clear vision or just a feeling you want to chase, reach out! Tell me what you're dreaming up, and if you've already got a sense of your budget or timeline, even better. <br> I typically reply within 48 hours.
   </p>
   <a href="mailto:studio@themariposa.co" class="contact-email reveal">studio@themariposa.co</a>
+
+  <p class="contact-or reveal">or tell me a little about it here</p>
+
+  <form class="contact-form reveal" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+    <input type="hidden" name="form-name" value="contact">
+    <p class="form-hidden"><label>Leave this empty <input name="bot-field"></label></p>
+
+    <div class="form-row">
+      <label>Your name <input type="text" name="name" autocomplete="name" required></label>
+      <label>Email <input type="email" name="email" autocomplete="email" required></label>
+    </div>
+
+    <label>What can I help with?
+      <select name="service" required>
+        <option value="" disabled selected>Choose one</option>
+        <option>Interior design</option>
+        <option>A website</option>
+        <option>Travel planning</option>
+        <option>Space + site</option>
+        <option>Not sure yet</option>
+      </select>
+    </label>
+
+    <label><span>Rough budget <span class="optional">(optional)</span></span>
+      <select name="budget">
+        <option value="" selected>Prefer not to say</option>
+        <option>Under $500</option>
+        <option>$500 to $1,500</option>
+        <option>$1,500+</option>
+      </select>
+    </label>
+
+    <label>Tell me about it
+      <textarea name="message" rows="5" required placeholder="Your space, your idea, your dream trip..."></textarea>
+    </label>
+
+    <button type="submit" class="btn-primary">Send it my way</button>
+    <p class="form-status" aria-live="polite"></p>
+  </form>
   <div class="contact-locations reveal">
     <div class="contact-loc">Boston, MA<span>United States</span></div>
     <div class="contact-loc">Bologna<span>Italy</span></div>
@@ -285,7 +324,7 @@
 
 <footer>
   <a href="#" class="footer-logo">🦋 Mariposa Co.</a>
-  <p class="footer-copy">© 2025 Mariposa Co. All rights reserved.</p>
+  <p class="footer-copy">© 2026 Mariposa Co. All rights reserved.</p>
   <ul class="footer-links">
     <li><a href="#work">Work</a></li>
     <li><a href="#services">Services</a></li>
