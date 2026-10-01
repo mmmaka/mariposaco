@@ -9,6 +9,8 @@
   --charcoal: #2A2520;
   --muted: #8A8178;
   --accent: #B8784A;
+  --error: #A3442B;       /* deep terracotta, readable on cream */
+  --error-bg: #F8EAE4;
   --serif: 'Cormorant Garamond', Georgia, serif;
   --sans: 'DM Sans', sans-serif;
   --transition: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
@@ -602,6 +604,43 @@ section { padding: 7rem 3rem; }
 .optional { text-transform: none; letter-spacing: 0; }
 .form-hidden { display: none; }
 .form-status { font-size: 0.9rem; color: var(--bark); min-height: 1.5em; }
+.form-status:empty { display: none; }
+.form-status.is-success,
+.form-status.is-error {
+  padding: 0.85rem 1rem;
+  border-left: 2px solid currentColor;
+  background: var(--cream);
+}
+.form-status.is-success { color: var(--bark); }
+.form-status.is-error { color: var(--error); background: var(--error-bg); }
+
+/* inline field errors */
+.field-error {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.45rem;
+  font-size: 0.82rem;
+  font-weight: 400;
+  color: var(--error);
+  text-transform: none;
+  letter-spacing: normal;
+}
+.field-error::before {
+  content: "";
+  flex: none;
+  width: 6px;
+  height: 6px;
+  margin-top: 0.5em;
+  border-radius: 50%;
+  background: currentColor;
+}
+.field-error[hidden] { display: none; }
+.contact-form .is-invalid,
+.contact-form .is-invalid:focus {
+  border-color: var(--error);
+  border-width: 1px;
+  background-color: var(--error-bg);
+}
 
 .contact-locations {
   margin-top: 3rem;
